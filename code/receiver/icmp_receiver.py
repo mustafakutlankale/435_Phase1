@@ -10,6 +10,7 @@ def receive_packet(packet):
             icmp_layer.show()  
 
 
-t = AsyncSniffer(filter="icmp", prn=receive_packet, count=1)
-t.start()
-t.join() 
+if __name__ == "__main__": 
+	t = AsyncSniffer(filter="icmp", prn=receive_packet, count=1)
+	t.start()
+	t.join() 
