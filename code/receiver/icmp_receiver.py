@@ -7,7 +7,7 @@ def receive_packet(packet):
         ip_layer = packet[IP]
 
         if ip_layer.ttl == 1 and icmp_layer.type == 8:
-            icmp_layer.show()  
+            packet.show()  
 
 
 if __name__ == "__main__": 
